@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Income Tax Calculator</h1>
+
+    <label>Taxable Income:</label>
+    <input onkeyup="compute()" type="number" id="taxable_inc" value="0"> <br>
+
+    <label>Tax Payable:</label>
+    <input type="number" id="res" readonly value="0"> <br>
+  </body>
+
+  <script>
+    function compute() {
+        let taxable_inc = document.getElementById("taxable_inc").value
+        let excess, rate, btax
+
+        if (taxable_inc < 250000) {
+            btax = 0
+            excess = 0
+            rate = 0
+        } else if (taxable_inc < 400000) {
+            btax = 0
+            excess = 250000
+            rate = 0.2
+        } else if (taxable_inc < 800000) {
+            btax = 30000
+            excess = 400000
+            rate = 0.25
+        } else if (taxable_inc < 2000000) {
+            btax = 130000
+            excess = 800000
+            rate = 0.3
+        } else if (taxable_inc < 8000000) {
+            btax = 490000
+            excess = 2000000
+            rate = 0.32
+        } else {
+            btax = 2410000
+            excess = 8000000
+            rate = 0.35
+        }
+
+        result = ((taxable_inc - excess) * rate) + btax
+
+        document.getElementById("res").value = result
+
+    }
+  </script>
+</html>
