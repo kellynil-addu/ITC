@@ -5,3 +5,10 @@ html {
 body {
     background-color: #cecfec;
 }
+
+.box {
+    background-color: #8c8ea7;
+    max-width: 480px;
+    margin: 6px;
+    padding: 6px;
+}
