@@ -12,3 +12,7 @@ body {
     margin: 6px;
     padding: 6px;
 }
+
+.hidden {
+    display: none;
+}

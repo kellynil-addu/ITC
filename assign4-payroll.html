@@ -5,33 +5,11 @@
   <body>
     <!-- Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters -->
     
-    <h1>Factorial, Sum, and Average</h1>
-
-    <label for="n">Type a number you want:</label>
-    <input type="number" id="n">
-    <button id="btn_calculate">Calculate</button>
-
-    <br>
-
-    <div id="result-box" class="box">
-        <label id="msg_factorial">The factorial of n is:</label>
-        <input type="number" id="res_factorial" readonly> <br>
-        
-        <label id="msg_sum">The sum of first n numbers is:</label>
-        <input type="number" id="res_sum" readonly> <br>
-
-        <label id="msg_avg">The average of first n numbers is:</label>
-        <input type="number" id="res_avg" readonly>
-
-        <br>
-        <button id="btn_hide">Close this box</button>
-    </div>
-
-    <a href="/ITC">Return to home</a>
+    <h1>Simple Payroll</h1>
 
   </body>
 
-  
+  <a href="/ITC">Return to home</a>
 
   <script>
     
@@ -79,6 +57,6 @@
         document.getElementById("result-box").classList.remove("hidden")
     })
 
-    document.getElementById("btn_hide").addEventListener("click", () => {hideBox()})
+    document.getElementById("btn_hide").addEventListener("click", hideBox)
   </script>
 </html>
