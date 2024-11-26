@@ -2,7 +2,8 @@
 
 main {
     display: flex;
-    flex: 400px 1 1;
+    width: 100%;
+    max-width: 1200px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px
@@ -12,7 +13,7 @@ article {
     flex: content 1 1;
     border-radius: 12px;
     padding: 28px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(246, 240, 250);
     border: 1px solid rgb(141, 141, 141);
 }
 
@@ -23,32 +24,57 @@ h1 {
     color:rgb(76, 85, 192)
 }
 
-nav {
-    display: flex;
-    flex: 350px 0 1;
+aside {
+    color:rgb(228, 222, 255);
+    display: grid;
+    flex-wrap: wrap;
+    flex: 250px 1 1;
     background-color: rgb(76, 85, 192);
     border-radius: 12px;
-    padding: 8px;
+    padding: 16px;
 }
 
-nav > div {
+nav {
+    gap: 8px 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav > a {
+    text-decoration: none;
+    display: grid;
+    flex: 128px 1 1;
     border-radius: 12px;
-    padding: 12px;
-    background-color: rgb(189, 190, 255);
-    border: 1px solid rgb(151, 153, 240);
+    padding: 4px 12px;
+    background-color: rgb(131, 133, 233);
+    color: white;
+    border: 1px solid rgb(190, 191, 255);
 }
 
 input {
+    color: black;
+    transition: outline 0.25s;
     min-height: 30px;
     border-radius: 6px;
     border: 1px solid lightgray;
+    outline: 1px solid rgba(146, 107, 253, 0);
+}
+
+input:hover {
+    outline: 1px solid rgb(146, 107, 253);
+}
+
+input:focus {
+    outline: 1px solid rgb(0, 47, 255)
 }
 
 button {
+    transition: background-color 0.1s, border 0.25s;
+    font-family: "Inter";
     min-height: 30px;
     border-radius: 6px;
-    border: 1px solid rgb(155, 161, 255);
-    background-color: #c0bcff;
+    border: 2px solid rgb(94, 101, 197);
+    background-color: #9790ff;
 }
 
 button:hover {
@@ -57,7 +83,7 @@ button:hover {
 }
 
 button:active {
-    background-color: white;
+    background-color: rgb(200, 215, 255);
 }
 
 body {
