@@ -10,11 +10,21 @@ main {
 }
 
 article {
-    flex: content 1 1;
+    flex: 50% 1 1;
+    text-align: center;
     border-radius: 12px;
     padding: 28px;
     background-color: rgb(246, 240, 250);
     border: 1px solid rgb(141, 141, 141);
+}
+
+section {
+    flex: auto 1 1;
+    margin: 16px 0px;
+    border: 1px solid rgb(135, 95, 128);
+    background-color: rgb(255, 236, 244);
+    border-radius: 8px;
+    padding: 8px;
 }
 
 h1 {
@@ -25,10 +35,11 @@ h1 {
 }
 
 aside {
+    flex: 50% 1 1;
     color:rgb(228, 222, 255);
     display: grid;
     flex-wrap: wrap;
-    flex: 250px 1 1;
+    flex: 240px 1 0;
     background-color: rgb(76, 85, 192);
     border-radius: 12px;
     padding: 16px;
@@ -104,4 +115,12 @@ body {
 
 .hidden {
     display: none;
+}
+
+.wrapped {
+    display: flex;
+    width: 100%;
+    place-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
 }

@@ -4,19 +4,48 @@
   </head>
   <body>
     <h1>Income Tax Calculator</h1>
+    <main>
+        <article>
+            <small>Type in the amount and the result will automatically be calculated for you.</small> <br>
+            
+            <div class="wrapped">
+                <section>
+                    <h3>Calculator</h3>
+    
+                    <label>Taxable Income:</label>
+                    <input type="number" id="taxable_inc" value="0"> <br>
+                
+                    <label>Tax Payable:</label>
+                    <input type="number" id="res" readonly value="0"> <br>
+                    <p>
+                        <small id="message">No tax entered yet.</small>
+                    </p>
+                </section>
 
-    <label>Taxable Income:</label>
-    <input type="number" id="taxable_inc" value="0"> <br>
+            </div>
 
-    <label>Tax Payable:</label>
-    <input type="number" id="res" readonly value="0"> <br>
-
-    <p>
-        <small id="message"></small>
-    </p>
-
-    <br>
-    <a href="/ITC">Return to home</a>
+        </article>
+        <aside>
+            <h2>Assignment Description</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare nibh sed dolor ullamcorper euismod. Fusce aliquam sapien nec neque consequat faucibus. Sed semper dui vitae eros placerat, vitae bibendum ante accumsan. Duis ultrices laoreet mi vel lacinia. Etiam eros odio, sagittis et euismod id, eleifend vitae leo. Nam commodo euismod sem quis rutrum. Mauris consectetur nisl vel dui ullamcorper, nec bibendum nulla fermentum. Fusce tristique diam eu scelerisque aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            </p>
+            <nav>
+                <a href="/ITC/assign1-conversions.html">
+                    <b><small>Previous project</small></b>
+                    <span>Unit Conversions</span>
+                </a>
+                <a href="/ITC/assign3-forloop.html">
+                    <b><small>Next project</small></b>
+                    <span>Factorial, Sum, Average</span>
+                </a>
+                <a href="/ITC">
+                    <b><small>Quit</small></b>
+                    <span>Return to homepage</span>
+                </a>
+            </nav>
+        </aside>
+    </main>
 
     <script>
         document.getElementById("taxable_inc").addEventListener("keyup", () => {
@@ -28,7 +57,7 @@
                 btax = 0
                 excess = 0
                 rate = 0
-                msg = "You have not reached the minimum amount (250,000 pesos) to have income tax."
+                msg = "You do not reach the minimum amount (250,000 pesos) to be subject to income tax."
             } else if (taxable_inc < 400000) {
                 btax = 0
                 excess = 250000

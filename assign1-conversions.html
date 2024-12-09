@@ -1,5 +1,6 @@
 <!DOCTYPE html>
   <head>
+    <meta name="viewport" conteint="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -7,24 +8,74 @@
     <main>
         <article>
             <small>Type in the amount and the result will automatically be calculated for you.</small>
-
+            
             <h3> Temperature </h3>
-            <p><b>Celsius to Fahrenheit</b></p>
-            <input placeholder="Type..." type="number" id="in_celsius"><label for="in_celsius">°C</label> <b>=></b>
-            <input type="number" id="out_fahrenheit" readonly><label for="out_fahrenheit">°F</label>
-
-            <p><b>Fahrenheit to Celsius</b></p>
-            <input placeholder="Type..." type="number" id="in_fahrenheit"><label for="in_fahrenheit">°F</label> <b>=></b>
-            <input type="number" id="out_celsius" readonly><label for="out_celsius">°C</label>
-
+            
+            <!--
+            TODO: Table display for each section
+            TODO: Optional reverse button
+            -->
+            <div class="wrapped">
+                <section>
+                    <p><b>Celsius to Fahrenheit</b></p>
+                    <div>
+                        <label for="in_celsius"><small>Input:</small></label>
+                        <input placeholder="Type..." type="number" id="in_celsius">
+                        <label for="in_celsius">°C</label>
+                    </div>
+                    <div>
+                        <label for="in_celsius"><small>Output:</small></label>
+                        <input type="number" id="out_fahrenheit" readonly><label for="out_fahrenheit">°F</label>                
+                    </div>
+                </section>
+                
+                <section>
+                    <p><b>Fahrenheit to Celsius</b></p>
+                    <div>
+                        <label for="in_fahrenheit"><small>Input:</small></label>
+                        <input placeholder="Type..." type="number" id="in_fahrenheit">
+                        <label for="in_fahrenheit">°F</label>
+                    </div>
+                    <div>
+                        <label for="out_celsius"><small>Output:</small></label>
+                        <input type="number" id="out_celsius" readonly>
+                        <label for="out_celsius">°C</label>
+                    </div>
+                </section>
+            </div>
+            
             <h3> Distance </h3>
-            <p><b>Meters to Feet</b></p>
-            <input placeholder="Type..." type="number" id="in_meters"><label for="in_meters">m</label> <b>=></b>
-            <input type="number" id="out_feet" readonly><label for="out_feet">ft</label>
-
-            <p><b>Feet to Meters</b></p>
-            <input placeholder="Type..." type="number" id="in_feet"><label for="in_feet">ft</label> <b>=></b>
-            <input type="number" id="out_meters" readonly><label for="out_meters">m</label>
+            
+            <div class="wrapped">
+                <section>
+                    <p><b>Meters to Feet</b></p>
+                    <div>
+                        <label for="in_meters"><small>Input:</small></label>
+                        <input placeholder="Type..." type="number" id="in_meters">
+                        <label for="in_meters">m</label>
+                    </div>
+                    <div>
+                        <label for="out_feet"><small>Output:</small></label>
+                        <input type="number" id="out_feet" readonly>
+                        <label for="out_feet">ft</label>
+                    </div>
+                </section>
+                
+                <section>
+                    <p><b>Feet to Meters</b></p>
+                    <div>
+                        <label for="in_feet"><small>Input:</small></label>
+                        <input placeholder="Type..." type="number" id="in_feet">
+                        <label for="in_feet">ft</label>
+                    </div>
+                    <div>
+                        
+                        <label for="out_meters"><small>Output:</small></label>
+                        <input type="number" id="out_meters" readonly>
+                        <label for="out_meters">m</label>
+                    </div>
+                </section>
+            </div>
             
             <p></p>   
         </article>
@@ -34,7 +85,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare nibh sed dolor ullamcorper euismod. Fusce aliquam sapien nec neque consequat faucibus. Sed semper dui vitae eros placerat, vitae bibendum ante accumsan. Duis ultrices laoreet mi vel lacinia. Etiam eros odio, sagittis et euismod id, eleifend vitae leo. Nam commodo euismod sem quis rutrum. Mauris consectetur nisl vel dui ullamcorper, nec bibendum nulla fermentum. Fusce tristique diam eu scelerisque aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
             </p>
             <nav>
-                <a href="">
+                <a href="/ITC/assign2-incometax.html">
                     <b><small>Next project</small></b>
                     <span>Income Tax Calculator</span>
                 </a>
