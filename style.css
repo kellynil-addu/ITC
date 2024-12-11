@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+html, body {
+    font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    place-items: center;
+    gap: 10px;
+    margin: 0px;
+    background-color: #d6d7f7;
+    height: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 main {
     flex-grow: 1;
     display: flex;
@@ -48,7 +66,6 @@ h1 {
 } */
 
 aside {
-    flex: 50% 1 1;
     color:rgb(228, 222, 255);
     display: grid;
     flex-wrap: wrap;
@@ -58,12 +75,18 @@ aside {
     padding: 16px;
 }
 
+
+
 nav {
     display: flex;
+    position: sticky;
+    top: 0;
     place-items: center;
     gap: 8px;
     padding: 4px;
-    border-bottom: 2px solid var(--purple);
+    background-color: var(--purple_bg);
+    border-bottom: 1px solid var(--purple);
+    max-height: 44px;
     width: 100%;
 }
 
@@ -74,6 +97,8 @@ nav > button {
     text-align: center;
     padding: 10px;
     border-radius: 16px;
+    max-height: 36px;
+    overflow: hidden;
 }
 
 nav > a:hover {
@@ -102,7 +127,30 @@ nav > span {
 }
 
 #fullpage, #fullpage > article {
-    min-height: 100%;
+    max-width: none;
+    height: 100%;
+    align-content: flex-start;
+}
+
+#fullpage > article {
+    flex: 480px 5 1;
+    width: fit-content;
+    overflow: scroll;
+}
+
+#panel {
+    background-color: var(--purple_bg);
+    height: min-content;
+    position: sticky;
+    top: 44px;
+    flex: 240px 1 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#panel h2 {
+    width: 100%;
 }
 
 input {
@@ -140,15 +188,10 @@ button:active {
     background-color: rgb(200, 215, 255);
 }
 
-body {
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    place-content: center;
-    place-items: center;
-    gap: 10px;
-    margin: 0px;
-    background-color: #d6d7f7;
+button.active {
+    cursor: default;
+    background-color: var(--purple);
+    color: white;
 }
 
 .box {
@@ -168,6 +211,14 @@ body {
     place-items: center;
     gap: 8px;
     flex-wrap: wrap;
+}
+
+.content {
+    display: contents;
+}
+
+.hidden {
+    display: none;
 }
 
 .force_wide {

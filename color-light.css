@@ -1,3 +1,6 @@
 :root {
     --purple: rgb(76, 85, 192);
+    --purple_bg: #d6d7f7;
+    --orange-border: rgb(197, 160, 146);
+    --orange-bg: rgb(255, 236, 244);
 }

@@ -2,24 +2,150 @@
   <head>
       <script src="theme.js"></script>
       <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="assign4.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
+    <dialog id="modal_delete">
+        <h3>Delete confirmation</h3>
+        <p>
+            The operation will delete the following employee(s):
+        </p>
+        <p class="modal_dynamic">
+
+        </p>
+        <p>Do you want to continue?</p>
+        <button class="response_no"> Cancel operation </button>
+        <button class="response_yes"> Delete </button>
+    </dialog>
+    <dialog id="modal_new">
+        <h3>Overwrite confirmation</h3>
+        <p>
+            The current list will be overwritten. Do you want to continue?
+        </p>
+        <button class="response_no"> Cancel operation </button>
+        <button class="response_yes"> Overwrite </button>
+    </dialog>
     <nav>
         <span><b>
             Payroll Program
         </b></span>
-        <button> File </button>
-        <button> Add Employees </button>
-        <button> Delete Employees </button>
+        <button id="tab_file"> File </button>
+        <button id="tab_add"> Add Employees </button>
+        <button id="tab_delete"> Delete Employees </button>
     </nav>
     <main id="fullpage">
-        <aside>
-            
-        </aside>
-        <article>
+        <div id="panel">
+            <div class="content" id="panel_file">
+                <h2>File Menu</h2>
+                <aside>
+                    <b>New</b>
+                    
+                    <small>
+                        <p>
+                            Make a new payroll list by clicking "New". Your
+                            current list will be cleared.
+                        </p>
+                    </small>
 
+                    <button id="btn_new">New list</button>
+                </aside>
+                <!-- <aside>
+                    <b>Save</b>
+                    <small>
+                        <p>
+                            Download as a JSON file:
+                        </p>
+                    </small>
+                    <button id="btn_save">Save to file</button>
+                </aside>
+                <aside>
+                    <b>Load</b>
+
+                    <small>
+                        <p>
+                            Upload a JSON file and load it into the program:
+                        </p>
+                    </small>
+                    <button id="btn_load">Load from file</button>
+                </aside> -->
+                <aside>
+                    <b>Quit</b>
+                    <small>
+                        <p>
+                            Leave the payroll program and return to the homepage.
+                        </p>
+                    </small>
+                    <div id="assign_nav">
+                        <a href="/ITC">Exit to homepage</a>
+                        <a href="/ITC/assign3-forloop.html">Previous project</a>
+                    </div>
+                </aside>
+            </div>
+            <div class="content" id="panel_add">
+                <h2>Add Menu</h2>
+                <aside>
+                    <b>Add an employee</b>
+
+                    <small>
+                        <p>
+                            Enter the details of the employee you wish to add
+                        </p>
+                        
+                        <button id="btn_add_random">Randomize values</button><br><br>
+
+                        <label>Employee Name:</label> <br>
+                        <input type="text" id="emp_name"> <br>
+                        <label>Days worked:</label> <br>
+                        <input type="number" id="emp_days"> <br>
+                        <label>Daily rate:</label> <br>
+                        <input type="number" id="emp_dailyrate"> <br>
+                        <label>Deduction amount:</label> <br>
+                        <input type="number" value="0" id="emp_deduction"> <br><br>
+
+                        <button id="btn_add">Add</button>
+                    </small>
+                </aside>
+            </div>
+            <div class="content" id="panel_delete">
+                <h2>Delete Menu</h2>
+                <aside>
+                    <b>Delete an employee</b>
+
+                    <small>
+                        <p>
+                            Enter the "Row No." indicated in the row of the employee
+                            you wish to delete. You may add multiple by separating each
+                            number in commas (e.g: 1,4,7)
+                        </p>
+
+                        <label>Row(s) to delete:</label> <br>
+                        <input type="text" id="emp_delete"> <br><br>
+                        <button id="btn_delete">Delete</button>
+                    </small>
+                </aside>
+            </div>
+        </div>
+        <article>
+            <table>
+                <thead>
+                    <tr>
+                        <td>No.</th>
+                        <td>Employee Name</td>
+                        <td>Days Worked</td>
+                        <td>Daily Rate</td>
+                        <td>Gross Pay</td>
+                        <td>Deduction Amount</td>
+                        <td>Net Pay</td>
+                    </tr>
+                </thead>
+                <tbody id="table_content">
+
+                </tbody>
+            </table>
         </article>
     </main>
+
+    <script src="assign4.js"></script>
   </body>
 </html>
