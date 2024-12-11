@@ -1,82 +1,25 @@
 <!DOCTYPE html>
   <head>
-    <link rel="stylesheet" href="style.css">
+      <script src="theme.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <!-- Celsius to Fahrenheit, Fahrenheit to Celsius, Meters to Feet, Feet to Meters -->
-    
-    <h1>Payroll Program</h1>
-    <main>
-        <article>
-            
-        </article>
+    <nav>
+        <span><b>
+            Payroll Program
+        </b></span>
+        <button> File </button>
+        <button> Add Employees </button>
+        <button> Delete Employees </button>
+    </nav>
+    <main id="fullpage">
         <aside>
-            <h2>Welcome to the payroll program!</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare nibh sed dolor ullamcorper euismod. Fusce aliquam sapien nec neque consequat faucibus. Sed semper dui vitae eros placerat, vitae bibendum ante accumsan. Duis ultrices laoreet mi vel lacinia. Etiam eros odio, sagittis et euismod id, eleifend vitae leo. Nam commodo euismod sem quis rutrum. Mauris consectetur nisl vel dui ullamcorper, nec bibendum nulla fermentum. Fusce tristique diam eu scelerisque aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-            </p>
-            <nav>
-                <a href="/ITC/assign3-forloop.html">
-                    <b><small>Previous project</small></b>
-                    <span>Factorial, Sum, and Average</span>
-                </a>
-                <a href="/ITC">
-                    <b><small>Quit</small></b>
-                    <span>Return to homepage</span>
-                </a>
-            </nav>
+            
         </aside>
+        <article>
+
+        </article>
     </main>
   </body>
-
-  <a href="/ITC">Return to home</a>
-
-  <script>
-    
-    function hideBox() {
-        document.getElementById("result-box").classList.add("hidden")
-    }
-
-    hideBox()
-
-    document.getElementById("btn_calculate").addEventListener("click", () => {
-
-        let n = document.getElementById("n").value * 1
-        
-        // Calculate the Factorial
-        let factorial_total = 1
-        let i = 2;
-        while (i <= n) {
-            factorial_total *= i
-            i += 1
-        }
-
-
-        // Calculate the sum of first n
-        let firstn_total = 0
-        i = 1
-        do {
-            firstn_total += i
-            i += 1
-        } while (i <= n)
-
-        // Calculate the average of first n
-        let firstn_average = 0
-        for (i = 1; i <= n; i++) {
-            firstn_average += i
-        }
-        firstn_average = firstn_average / n
-
-        // Push the result to the document
-        document.getElementById("res_factorial").value = factorial_total
-        document.getElementById("res_sum").value = firstn_total
-        document.getElementById("res_avg").value = firstn_average
-        document.getElementById("msg_factorial").innerHTML = "The factorial of " + n + " is:"
-        document.getElementById("msg_sum").innerHTML = "The sum of first " + n + " numbers is:"
-        document.getElementById("msg_avg").innerHTML = "The average of first " + n + " numbers is:"
-        document.getElementById("result-box").classList.remove("hidden")
-    })
-
-    document.getElementById("btn_hide").addEventListener("click", hideBox)
-  </script>
 </html>

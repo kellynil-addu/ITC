@@ -2,6 +2,7 @@
   <head>
     <meta name="viewport" conteint="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
   </head>
   <body>
     <h1>Unit Conversions</h1>
@@ -17,7 +18,7 @@
             -->
             <div class="wrapped">
                 <section>
-                    <p><b>Celsius to Fahrenheit</b></p>
+                    <h4>Celsius to Fahrenheit</h4>
                     <div>
                         <label for="in_celsius"><small>Input:</small></label>
                         <input placeholder="Type..." type="number" id="in_celsius">
@@ -30,7 +31,7 @@
                 </section>
                 
                 <section>
-                    <p><b>Fahrenheit to Celsius</b></p>
+                    <h4>Fahrenheit to Celsius</h4>
                     <div>
                         <label for="in_fahrenheit"><small>Input:</small></label>
                         <input placeholder="Type..." type="number" id="in_fahrenheit">
@@ -48,7 +49,7 @@
             
             <div class="wrapped">
                 <section>
-                    <p><b>Meters to Feet</b></p>
+                    <h4>Meters to Feet</h4>
                     <div>
                         <label for="in_meters"><small>Input:</small></label>
                         <input placeholder="Type..." type="number" id="in_meters">
@@ -62,7 +63,7 @@
                 </section>
                 
                 <section>
-                    <p><b>Feet to Meters</b></p>
+                    <h4>Feet to Meters</h4>
                     <div>
                         <label for="in_feet"><small>Input:</small></label>
                         <input placeholder="Type..." type="number" id="in_feet">
@@ -82,18 +83,22 @@
         <aside>
             <h2>Assignment Description</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare nibh sed dolor ullamcorper euismod. Fusce aliquam sapien nec neque consequat faucibus. Sed semper dui vitae eros placerat, vitae bibendum ante accumsan. Duis ultrices laoreet mi vel lacinia. Etiam eros odio, sagittis et euismod id, eleifend vitae leo. Nam commodo euismod sem quis rutrum. Mauris consectetur nisl vel dui ullamcorper, nec bibendum nulla fermentum. Fusce tristique diam eu scelerisque aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                This webpage allows you to convert between units of temperature and distance. It is designed using
+                event listeners so that the result is automatically shown as soon as a key is pressed. This assignment
+                demonstrates basic usage of variables, operations, and essential JavaScript functions such as the
+                <code>document.getElementById()</code> function which is involved in reading the value of the user's
+                input as well as setting the value in the output field.
             </p>
-            <nav>
-                <a href="/ITC/assign2-incometax.html">
-                    <b><small>Next project</small></b>
-                    <span>Income Tax Calculator</span>
-                </a>
+            <div id="assign_nav">
                 <a href="/ITC">
                     <b><small>Quit</small></b>
                     <span>Return to homepage</span>
                 </a>
-            </nav>
+                <a href="/ITC/assign2-incometax.html">
+                    <b><small>Next project</small></b>
+                    <span>Income Tax Calculator</span>
+                </a>
+            </div>
         </aside>
     </main>
     
