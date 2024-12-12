@@ -19,3 +19,13 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: var(--orange-bg);
 }
+
+@media (max-width: 768px) {
+    #panel h2 {
+        display: none;
+    }
+
+    nav span {
+        display: none;
+    }
+}

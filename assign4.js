@@ -91,19 +91,22 @@ delete_menu["btn_delete"].addEventListener("click", () => {
     
     let content = ""
     for (number in splitted) {
-        content += (number * 1 + 1) + " (" + list[splitted[number] - 1].name + ") <br>"
+        alert(number)
+        content += splitted[number] + " (" + list[splitted[number] - 1].name + ") <br>"
     }
 
     dynamic.innerHTML = content
 
     delete_menu["modal_delete"].show()
 
-    delete_menu["modal_delete"].addEventListener("click", (event) => {
+    function listenOnClick(event) {
         let response = event.target.classList[0]
         if (response == "response_no") {
             delete_menu["modal_delete"].close()
+            delete_menu["modal_delete"].removeEventListener("click", listenOnClick)
         } else if (response == "response_yes") {
             delete_menu["modal_delete"].close()
+            delete_menu["modal_delete"].removeEventListener("click", listenOnClick)
 
             for (let i = splitted.length - 1; i >= 0; i--) {
                 list.splice(splitted[i] - 1, 1)
@@ -111,21 +114,27 @@ delete_menu["btn_delete"].addEventListener("click", () => {
 
             updateTable()
         }
-    })
+    }
+
+    delete_menu["modal_delete"].addEventListener("click", listenOnClick)
 })
 
 file_menu["btn_new"].addEventListener("click", () => {
     file_menu["modal_new"].show()
 
-    file_menu["modal_new"].addEventListener("click", (event) => {
+    function listenOnClick(event) {
         let response = event.target.classList[0]
         if (response == "response_no") {
             file_menu["modal_new"].close()
+            file_menu["modal_new"].removeEventListener("click", listenOnClick)
         } else if (response == "response_yes") {
             file_menu["modal_new"].close()
+            file_menu["modal_new"].removeEventListener("click", listenOnClick)
             initList()
         }
-    })
+    }
+
+    file_menu["modal_new"].addEventListener("click", listenOnClick)
 })
 
 function initList() {
